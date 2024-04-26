@@ -17,13 +17,13 @@ public class Main {
         //Imprima todas las variables (de instancia y de clase) que pueda utilizando la referencia (creadas en este ejercicio).
 
         System.out.println("Variables de instancia: \n" );
-        System.out.println(subClaseMasBaja.marca + " \n");
-        System.out.println(subClaseMasBaja.modelo+ " \n");
-        System.out.println("Informacion del Objeto \n");
+        System.out.println(subClaseMasBaja.marca);
+        System.out.println(subClaseMasBaja.modelo+ "\n");
+        System.out.println("Informacion del Objeto");
         subClaseMasBaja.imprimir( "Auto");
-        System.out.println("\n Variables de clase: ");
-        HeredaSubClase.imprimir1("\n Imprimira la Serie de las 3 clases ");
-        HeredaSubClase.imprimir2("\n Clase abuelo: ");
+        System.out.println("\nVariables de clase: ");
+        HeredaSubClase.imprimir1("\nImprimira la Serie de las 3 clases ");
+        HeredaSubClase.imprimir2("\nClase abuelo: ");
 
         //Llame a todos los métodos (de instancia y de clase) que pueda utilizando la referencia (creados en este ejercicio).
 
