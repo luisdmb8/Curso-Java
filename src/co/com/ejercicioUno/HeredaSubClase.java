@@ -48,13 +48,13 @@ public class HeredaSubClase extends SubclaseAbstract{
         System.out.println(titulo);
         System.out.println("Marca: " + marca);
         System.out.println("Modelo: " + modelo);
-        System.out.println("Atributo de la superclase: " + super.toString());
+        System.out.println("Clase Padre: " + super.toString());
     }
     public static void imprimir1(String titulo) {
         System.out.println(titulo);
         System.out.println("Serie: " + serie);
-        System.out.println("Serie super clase: " + SubclaseAbstract.serie);
-        System.out.println("Serie clase abuela: " + SuperClase.serie);
+        System.out.println("Clase Padre: " + SubclaseAbstract.serie);
+        System.out.println("Clase abuelo: " + SuperClase.serie);
     }
 
 

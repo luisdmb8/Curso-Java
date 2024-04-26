@@ -22,7 +22,8 @@ public class Main {
         System.out.println("Informacion del Objeto \n");
         subClaseMasBaja.imprimir( "Auto");
         System.out.println("\n Variables de clase: ");
-        HeredaSubClase.imprimir1("\n Super clase: ");
+        HeredaSubClase.imprimir1("\n Imprimira la Serie de las 3 clases ");
+        HeredaSubClase.imprimir2("\n Clase abuelo: ");
 
         //Llame a todos los métodos (de instancia y de clase) que pueda utilizando la referencia (creados en este ejercicio).
 
@@ -32,9 +33,17 @@ public class Main {
         System.out.println("Modelo: " + modelo);
 
         HeredaSubClase.setSerie("M4");
-        System.out.println("\n Nueva Serie (desde método de clase): " + HeredaSubClase.getSerie());
+        System.out.println("\n Nueva Serie : " + HeredaSubClase.getSerie());
 
+        //Declare una referencia de la superclase de la refencia que está utilizando.
 
+        SubclaseAbstract superClaseAbstract;
+
+        // Haga un Casting del objeto creado a esta nueva referencia.
+
+        superClaseAbstract = (SubclaseAbstract) subClaseMasBaja;
+
+        superClaseAbstract.imprimir("SubClaseAbstrtact");
 
 
     }

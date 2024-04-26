@@ -4,7 +4,7 @@ public class SubclaseAbstract extends SuperClase{
 
     protected String marca;
     protected int modelo;
-    protected static String serie;
+    protected static String serie = "CLA180";
 
     public SubclaseAbstract(String marca, int modelo, String serie ,String marca1, int modelo1, String serie1) {
         super(marca, modelo, serie);
@@ -72,7 +72,7 @@ public class SubclaseAbstract extends SuperClase{
         .append("marca= '").append(marca).append('\'')
         .append(", modelo= ").append(modelo).append('\'')
         .append(", serie = ").append(serie).append('\'')
-        .append(", Atributo Padre = '").append(super.toString()).append('\'')
+        .append(", Clase Abuelo = '").append(super.toString()).append('\'')
         .append('}').toString();
     }
 }

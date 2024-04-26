@@ -4,7 +4,7 @@ public abstract class SuperClase {
 
     protected String marca;
     protected int modelo;
-    protected static String serie;
+    protected static String serie = "AMG45";
 
     public SuperClase(String marca, int modelo, String serie) {
     }
