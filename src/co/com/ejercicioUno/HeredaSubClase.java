@@ -3,32 +3,17 @@ package co.com.ejercicioUno;
 public class HeredaSubClase extends SubclaseAbstract{
     public String marca;
     public int modelo;
-    public static String serie;
-
-    public HeredaSubClase(){
-
-    }
+    public static String serie = "sl180";
 
 
-    public HeredaSubClase(String marca, int modelo, String serie, String marca1, int modelo1, String serie1) {
-        super(marca, modelo, serie);
-        this.marca = marca1;
-        this.modelo = modelo1;
-        this.serie= serie1;
-
-    }
-
-    public HeredaSubClase(String marca, int modelo, String serie, String marca1, int modelo1, String serie1, String marca2, int modelo2, String serie2) {
-        super(marca, modelo, serie, marca1, modelo1, serie1);
-        this.marca = marca2;
-        this.modelo = modelo2;
-        this.serie= serie2;
-    }
-
-    public HeredaSubClase(String marca, int modelo, String serie) {
+    public HeredaSubClase(String marca, int modelo) {
+        super();
         this.marca = marca;
         this.modelo = modelo;
-        this.serie = serie;
+    }
+
+    public HeredaSubClase() {
+
     }
 
     @Override
@@ -63,8 +48,24 @@ public class HeredaSubClase extends SubclaseAbstract{
         System.out.println(titulo);
         System.out.println("Marca: " + marca);
         System.out.println("Modelo: " + modelo);
-        System.out.println("Serie: " + serie);
         System.out.println("Atributo de la superclase: " + super.toString());
     }
+    public static void imprimir1(String titulo) {
+        System.out.println(titulo);
+        System.out.println("Serie: " + serie);
+        System.out.println("Serie super clase: " + SubclaseAbstract.serie);
+        System.out.println("Serie clase abuela: " + SuperClase.serie);
+    }
 
+
+    @Override
+    public String toString() {
+        return new StringBuilder("HeredaSubClase{")
+        .append("marca='").append(marca).append('\'')
+        .append(", modelo=").append(modelo)
+        .append(", serie=").append(serie)
+        .append(", marca='").append(super.marca).append('\'')
+        .append(", modelo=").append(super.modelo)
+        .append('}').toString();
+    }
 }

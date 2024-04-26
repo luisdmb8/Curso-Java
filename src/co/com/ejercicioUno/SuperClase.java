@@ -9,13 +9,6 @@ public abstract class SuperClase {
     public SuperClase(String marca, int modelo, String serie) {
     }
 
-    public void imprimir(String titulo){
-        System.out.println(titulo);
-        System.out.println("Marca: " + marca);
-        System.out.println("Serie: " + serie);
-        System.out.println("Modelo: " + modelo);
-    }
-
     public SuperClase(String marca, int modelo) {
         this.marca = marca;
         this.modelo = modelo;
@@ -24,6 +17,7 @@ public abstract class SuperClase {
     public SuperClase() {
 
     }
+
 
     public String getMarca() {
         return marca;
@@ -49,15 +43,28 @@ public abstract class SuperClase {
         SuperClase.serie = serie;
     }
 
+    public void imprimir(String titulo){
+        System.out.println(titulo);
+        System.out.println("Marca: " + marca);
+        System.out.println("Serie: " + serie);
+        System.out.println("Modelo: " + modelo);
+    }
+
+    public static void imprimir2(String titulo){
+        System.out.println(titulo);
+        System.out.println("Serie: " + serie);
+    }
+
     @Override
     public String toString() {
-         return new StringBuilder("SuperClase{")
-                 .append("marca='").append(marca).append('\'')
-                 .append(", modelo=").append(modelo).append('\'')
-                 .append(", serie=").append(serie).append('\'')
-                 .append('}')
-                 .toString();
+        return new StringBuilder("SuperClase{")
+                .append("marca='").append(marca).append('\'')
+                .append(", modelo=").append(modelo).append('\'')
+                .append(", serie=").append(serie).append('\'')
+                .append('}')
+                .toString();
     }
+
 
 }
 

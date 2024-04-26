@@ -2,12 +2,9 @@ package co.com.ejercicioUno;
 
 public class SubclaseAbstract extends SuperClase{
 
-
     protected String marca;
     protected int modelo;
     protected static String serie;
-    public SubclaseAbstract(String marca, int modelo, String serie) {
-    }
 
     public SubclaseAbstract(String marca, int modelo, String serie ,String marca1, int modelo1, String serie1) {
         super(marca, modelo, serie);
@@ -16,9 +13,16 @@ public class SubclaseAbstract extends SuperClase{
         this.serie = serie1;
     }
 
+    public SubclaseAbstract(String marca, int modelo) {
+        super();
+        this.marca = marca;
+        this.modelo = modelo;
+    }
 
     public SubclaseAbstract() {
+
     }
+
 
     @Override
     public String getMarca() {
@@ -56,14 +60,19 @@ public class SubclaseAbstract extends SuperClase{
         System.out.println("Atributo de la superclase: " + super.toString());
     }
 
+    public static void imprimir1(String titulo) {
+        System.out.println(titulo);
+        System.out.println("Serie: " + serie);
+        System.out.println("Serie Super Clase: " + SuperClase.serie);
+    }
 
     @Override
     public String toString() {
         return new StringBuilder("SubclaseAbstract{")
-        .append("marca='").append(marca).append('\'')
-        .append(", modelo=").append(modelo).append('\'')
-        .append(", serie").append(serie).append('\'')
-        .append(", Atributo Padre ='").append(super.toString()).append('\'')
+        .append("marca= '").append(marca).append('\'')
+        .append(", modelo= ").append(modelo).append('\'')
+        .append(", serie = ").append(serie).append('\'')
+        .append(", Atributo Padre = '").append(super.toString()).append('\'')
         .append('}').toString();
     }
 }
