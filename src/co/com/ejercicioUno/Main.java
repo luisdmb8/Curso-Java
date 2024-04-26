@@ -33,7 +33,7 @@ public class Main {
         System.out.println("Modelo: " + modelo);
 
         HeredaSubClase.setSerie("M4");
-        System.out.println("\n Nueva Serie : " + HeredaSubClase.getSerie());
+        System.out.println("Nueva Serie : " + HeredaSubClase.getSerie());
 
         //Declare una referencia de la superclase de la refencia que está utilizando.
 
@@ -43,7 +43,7 @@ public class Main {
 
         superClaseAbstract = (SubclaseAbstract) subClaseMasBaja;
 
-        superClaseAbstract.imprimir("SubClaseAbstrtact");
+        superClaseAbstract.imprimir("\nSubClaseAbstrtact");
 
 
     }
