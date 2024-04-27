@@ -23,7 +23,7 @@ public class Main {
         subClaseMasBaja.imprimir( "Auto");
         System.out.println("\nVariables de clase: ");
         HeredaSubClase.imprimir1("\nImprimira la Serie de las 3 clases ");
-        HeredaSubClase.imprimir2("\nClase abuelo: ");
+        HeredaSubClase.imprimir2("\nClase abuelo principal: ");
 
         //Llame a todos los métodos (de instancia y de clase) que pueda utilizando la referencia (creados en este ejercicio).
 
