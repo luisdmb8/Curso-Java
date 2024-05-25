@@ -15,7 +15,9 @@ public class TCPServer extends Thread{
 
     public void run(){
         try (ServerSocket server = new ServerSocket(this.puerto)){
+            System.out.println("Port Conection " + puerto);
             Socket con = server.accept();
+            System.out.println("Acepta Conection " + con.getInetAddress().getHostAddress());
                 DataInputStream dis = new DataInputStream(con.getInputStream());
                 while(dis.available() > 0){
                     System.out.println(dis.readLine());
