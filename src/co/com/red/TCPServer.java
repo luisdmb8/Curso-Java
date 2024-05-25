@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class TCPServer {
+public class TCPServer extends Thread{
     private int puerto;
 
     public TCPServer(int puerto){
@@ -21,10 +21,8 @@ public class TCPServer {
                     System.out.println(dis.readLine());
                 }
             } catch (IOException ex) {
-            throw new RuntimeException(ex);
+             ex.printStackTrace();
         }
-    } catch (IOException e) {
-           e.printStackTrace();
-        }
+    }
     }
 }

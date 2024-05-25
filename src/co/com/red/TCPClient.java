@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.net.Socket;
 
-public class TCPClient {
+public class TCPClient extends Thread{
     private String ip;
     private int puerto;
 
