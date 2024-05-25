@@ -16,8 +16,9 @@ public class TCPClient extends Thread{
     public void solicitar(){
         try (Socket cliente = new Socket(this.ip, this.puerto)){
             PrintStream ps = new PrintStream(cliente.getOutputStream());
+            ps.println("Hola");
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 }

@@ -13,16 +13,15 @@ public class TCPServer extends Thread{
         this.puerto = puerto;
     }
 
-    public void escuchar(){
-        try (ServerSocket server = new ServerSocket(this.puerto);
-            Socket con = server.accept()){
+    public void run(){
+        try (ServerSocket server = new ServerSocket(this.puerto)){
+            Socket con = server.accept();
                 DataInputStream dis = new DataInputStream(con.getInputStream());
                 while(dis.available() > 0){
                     System.out.println(dis.readLine());
                 }
-            } catch (IOException ex) {
-             ex.printStackTrace();
+            } catch (IOException e) {
+             e.printStackTrace();
         }
-    }
     }
 }
