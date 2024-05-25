@@ -14,14 +14,16 @@ public class TCPServer {
     }
 
     public void escuchar(){
-        try (ServerSocket server = new ServerSocket(this.puerto)){
-            Socket con = server.accept(){
+        try (ServerSocket server = new ServerSocket(this.puerto);
+            Socket con = server.accept()){
                 DataInputStream dis = new DataInputStream(con.getInputStream());
                 while(dis.available() > 0){
                     System.out.println(dis.readLine());
                 }
-            }
-        } catch (IOException e) {
+            } catch (IOException ex) {
+            throw new RuntimeException(ex);
+        }
+    } catch (IOException e) {
            e.printStackTrace();
         }
     }
